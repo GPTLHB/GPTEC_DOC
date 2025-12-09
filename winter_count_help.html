@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winter Count Help Guide</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #2f3640;
+      --muted: #6b7280;
+      --primary: #0f6fff; /* MS blue */
+      --primary-dark: #0c55c7;
+      --accent: #2c3e50;
+      --border: #e5e7eb;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Segoe UI Emoji";
+      color: var(--text);
+      background: var(--bg);
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 32px 20px; }
+    header { border-bottom: 1px solid var(--border); background: #f8fafc; }
+    header .container { display: flex; align-items: center; justify-content: space-between; padding: 20px; }
+    .title { font-size: 28px; font-weight: 700; color: var(--accent); margin: 0; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    nav { display: flex; gap: 14px; flex-wrap: wrap; }
+    nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+
+    h2 { font-size: 22px; margin: 28px 0 12px; color: var(--accent); }
+    h3 { font-size: 18px; margin: 22px 0 8px; color: var(--accent); }
+    p { margin: 10px 0; }
+    ul { margin: 8px 0 16px; padding-left: 22px; }
+    li { margin: 6px 0; }
+
+    .card { border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 860px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+
+    .btn { display: inline-block; background: var(--primary); color: #fff; padding: 10px 14px; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .btn:hover { background: var(--primary-dark); }
+
+    details { border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; background: #fbfdff; }
+    summary { cursor: pointer; font-weight: 700; color: var(--accent); }
+    details + details { margin-top: 10px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; padding: 2px 6px; }
+
+    footer { margin-top: 40px; padding: 24px 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div>
+        <h1 class="title">Winter Count Help Guide</h1>
+        <div class="subtitle">Version 1.0 • January 2025</div>
+      </div>
+      <nav aria-label="On this page">
+        <a href="#welcome">Welcome</a>
+        <a href="#features">Features</a>
+        <a href="#getting-started">Getting Started</a>
+        <a href="#fabric-resources">Fabric Resources</a>
+        <a href="#faq">Fabric FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="card">
+      <h2>Welcome to Winter Count</h2>
+      <p><strong>Winter Count</strong> is a comprehensive public health data system designed to support Tribal health authorities in managing communicable disease cases, improving data analysis, and ensuring Tribal data sovereignty. This guide provides essential resources to help you navigate and utilize the system effectively.</p>
+    </section>
+
+    <section id="features">
+      <h2>Key Features</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>1. Dashboard Overview</h3>
+          <ul>
+            <li><strong>Central hub</strong> for data insights and navigation.</li>
+            <li><strong>Reports & Visualizations:</strong> PDFs, static reports, Tableau dashboards, and Power BI reports.</li>
+            <li><strong>Role-Based Access:</strong> Users see only data relevant to their permissions.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2. Case Management</h3>
+          <ul>
+            <li>Search cases by ID, name, or disease type.</li>
+            <li>Add, edit, and delete case notes.</li>
+            <li>View electronic lab reports (eLR) for real-time updates.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>3. Data Analysis & Reporting</h3>
+          <ul>
+            <li>Create custom Power BI reports.</li>
+            <li>Access automated trend graphs for diseases like COVID-19, syphilis, and diabetes.</li>
+            <li>Training resources available for interpreting data.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>4. Security & Compliance</h3>
+          <ul>
+            <li><strong>RBAC:</strong> Role-based access control for confidentiality.</li>
+            <li><strong>Audit Trails:</strong> Track system activity.</li>
+            <li><strong>Secure Data Sharing:</strong> Tools for Tribal data sovereignty.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="getting-started" class="card">
+      <h2>Getting Started</h2>
+      <ul>
+        <li><strong>Login:</strong> Use your username and <span class="kbd">Duo</span> authentication for secure access.</li>
+        <li><strong>Explore the Dashboard:</strong> Review reports, search cases, and view real-time updates.</li>
+        <li><strong>Access Support:</strong> Visit the help section for FAQs, training materials, and system documentation.</li>
+        <li><strong>Need Assistance?</strong> Contact the <a href="mailto:support@gptchb.org">GPTEC Informatics Team</a> or submit feature requests via <a href="https://gptlhb.monday.com/boards/8094114569" target="_blank" rel="noopener">GPTLHB Monday.com</a>.</li>
+      </ul>
+    </section>
+
+    <section id="fabric-resources">
+      <h2>Fabric Resources</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>Training</h3>
+          <ul>
+            <li><a href="https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials" target="_blank" rel="noopener">Microsoft Fabric Tutorials</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLv2BtOtLblH1RhbtfTpp9ovi3Y-3HiRO2" target="_blank" rel="noopener">Guy in a Cube Playlist</a></li>
+            <li><a href="https://youtube.com/playlist?list=PLug2zSFKZmV0Yaya7NxRQfrrPtfF2vj0K" target="_blank" rel="noopener">Learn Microsoft Fabric</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Coding Resources</h3>
+          <ul>
+            <li><strong>PySpark:</strong> <a href="https://cartershanklin.github.io/pyspark-cheatsheet/" target="_blank" rel="noopener">Cheatsheet</a>, <a href="https://sparkbyexamples.com/" target="_blank" rel="noopener">Spark by Examples</a></li>
+            <li><strong>Python:</strong> <a href="https://www.python.org/" target="_blank" rel="noopener">Python.org</a>, <a href="https://www.w3schools.com/python/" target="_blank" rel="noopener">W3Schools</a></li>
+            <li><strong>SQL:</strong> <a href="https://sqlbolt.com/" target="_blank" rel="noopener">SQLBolt</a>, <a href="https://sqlzoo.net/" target="_blank" rel="noopener">SQLZoo</a></li>
+            <li><strong>R:</strong> <a href="https://www.r-project.org/" target="_blank" rel="noopener">R Project</a>, <a href="https://www.datacamp.com/" target="_blank" rel="noopener">DataCamp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Internal Links</h3>
+        <ul>
+          <li><a href="https://gptchb2.sharepoint.com/sites/GPTECInformatics/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FGPTECInformatics%2FShared%20Documents%2FData%20Dictionaries&viewid=826eb6d4-59e0-4655-8727-07b714836301" target="_blank" rel="noopener">Data Dictionaries (SharePoint)</a></li>
+          <li><a href="https://gptchb2-my.sharepoint.com/shared?id=%2Fsites%2Fepi-center%2FShared%20Documents%2FData%20Sharing%20Agreements&listurl=https%3A%2F%2Fgptchb2.sharepoint.com%2Fsites%2Fepi-center%2FShared%20Documents" target="_blank" rel="noopener">Data Sharing Agreements (OneDrive)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Fabric FAQ</h2>
+
+      <details open>
+        <summary>What can I break in Fabric?</summary>
+        <p>Users with <em>Admin</em>, <em>Member</em>, and <em>Contributor</em> roles can perform all CRUD operations in a Lakehouse. A <em>Viewer</em> can only read data via the SQL analytics endpoint. <strong>Do not delete</strong> items unless you are certain.</p>
+        <p><a href="https://learn.microsoft.com/en-us/fabric/data-engineering/workspace-roles-lakehouse" target="_blank" rel="noopener">Learn more</a></p>
+      </details>
+
+      <details>
+        <summary>Is Copilot AI enabled in Fabric?</summary>
+        <p>Not until enterprise-level capacity (F64) is enabled.</p>
+      </details>
+
+      <details>
+        <summary>What are naming conventions for Fabric?</summary>
+        <p>Follow the format of current objects of similar type. Some object types have naming restrictions.</p>
+      </details>
+
+      <details>
+        <summary>Can analysts connect to Fabric data from outside tools (e.g., SAS)?</summary>
+        <p>Publicly available data can be accessed freely. For protected data, contact Informatics staff to move data to your folder in the RDS.</p>
+      </details>
+
+      <details>
+        <summary>How can I share publicly available data externally?</summary>
+        <p>Public data can be freely shared outside Fabric. For collaboration within Fabric with someone outside GPTLHB, contact Informatics &amp; IT.</p>
+      </details>
+
+      <details>
+        <summary>Can I export data from Fabric?</summary>
+        <p>All data sources in Fabric can be exported; every action is logged. A workaround may be needed due to tenant differences.</p>
+      </details>
+
+      <details>
+        <summary>How do I perform Exploratory Data Analysis (EDA)?</summary>
+        <p>Use notebooks within Fabric (Python, R, SQL) to perform EDA. One benefit is not being limited by your computer’s memory.</p>
+      </details>
+
+      <details>
+        <summary>Will my access change in Fabric?</summary>
+        <p>No. You will have the same level of access to data sources. Restricted sources remain limited to authorized users.</p>
+      </details>
+
+      <details>
+        <summary>Can I do no-code analysis (e.g., Excel pivot tables)?</summary>
+        <p>CSV files can be analyzed in notebooks or loaded into delta tables and queried with SQL.</p>
+      </details>
+    </section>
+
+    <section class="card">
+      <p><strong>Questions?</strong> Email <a href="mailto:support@gptchb.org">support@gptchb.org</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2025 Winter Count • GPTEC Informatics</div>
+  </footer>
+</body>
+</html>
